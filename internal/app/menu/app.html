@@ -1,0 +1,69 @@
+<html>
+<style>
+    body {
+        margin: 10px;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    footer {
+        bottom: 0px;
+        position: fixed;
+        margin-bottom: 10px;
+    }
+
+    .sop {
+        background: transparent;
+        width: fit-content;
+        padding-left: 0px;
+        margin-left: 43px;
+        padding: 2px;
+        padding-left: 7px;
+        padding-right: 7px;
+        transition: .1s;
+    }
+
+    .sop:hover {
+        background: #ededed;
+        width: fit-content;
+        padding-left: 0px;
+        margin-left: 43px;
+        padding: 2px;
+        padding-left: 7px;
+        padding-right: 7px;
+        transition: .1s;
+    }
+</style>
+
+<body>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/f5b6b4399c.js" crossorigin="anonymous"></script>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:48px;margin-top: -50px;">
+        <a href="#" style="bottom: 29px;position: absolute;" class="w3-bar-item w3-button"><i
+                class="fas fa-cog"></i></a>
+        <a onclick="parent.ipower();" href="#" style="bottom: 0px;position: absolute;" class="w3-bar-item w3-button"><i class="fa fa-power-off"
+                aria-hidden="true"></i>
+        </a>
+    </div>
+    <div style="margin-left: 48px;width: 100%;height: 100%;">
+        <li style="margin-top:50px">
+            <ul class="sop">Settings</ul>
+            <ul class="sop">About</ul>
+            <ul class="sop">Version</ul>
+            <ul onclick="parent.iwelcome();parent.document.getElementById('imenu').remove();" class="sop">Welcome</ul>
+        </li>
+    </div>
+    <script>
+        window.buttons = {
+                force_close: function () {
+
+                    winbox.close(true);
+                }
+            }
+    </script>
+</body>
+
+</html>

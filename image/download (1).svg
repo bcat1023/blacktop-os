@@ -1,0 +1,51 @@
+
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="128" height="128" viewBox="0 0 100 100">
+
+
+		<defs>
+			<g id="background">
+<path fill="url(#background-gradient)" stroke="none" d=" M 0 100 L 100 100 100 0 0 0 0 100 Z"/>
+</g><mask id="mask">
+<path fill="#FFFFFF" stroke="none" d=" M 0 100 L 100 100 100 0 0 0 0 100 Z"/>
+</mask><g id="middle-1">
+<path fill="#000000" fill-opacity="0.1" stroke="none" d=" M 77.1 14.9 Q 64.1 11.1 50 11.1 21.8 11.1 0 25.2 L 0 100 100 100 100 25.2 Q 89.7 18.5 77.1 14.9 Z"/>
+</g>
+			
+	<linearGradient id="background-gradient" x1="0" y1="0" y2="1" x2="0" >
+		<stop stop-color="#31A5FC" offset="0%"/>
+		<stop stop-color="#31A5FC" offset="100%"/>
+	</linearGradient>
+
+			
+			
+			<g transform="translate(-100 -99.99999618530273)" id="picture">
+    <path d="M199.98 110.812a2.49 2.49 0 0 0-2.48-2.312h-95a2.49 2.49 0 0 0-2.48 2.312L100 175a2.5 2.5 0 0 0 2.5 2.5h95a2.5 2.5 0 0 0 2.5-2.5l-.02-64.188zM196 165.5h-92v-53h92v53zm-30 24c-4-1-5-4-5-8v-1h-22v1c0 4-1 7-5 8-.97.242-1 2 0 2h32c1 0 .97-1.758 0-2z"/>
+    <path d="M127.037 111.528h3.308v55.604h-3.308V142.52h-23.034v24.612h-3.189v-55.604h3.248v24.611h23.034v-24.611h-.059zm43.757 57.307v-56.571h5.812v56.572h-5.812z"/>
+</g>
+			
+		</defs>
+
+		
+
+			<use xlink:href="#background" fill="url(#background-gradient)" />
+
+		<use xlink:href="#middle-1" />
+
+			<g mask="url(#mask)">
+				<g transform="
+				        translate(
+                                50 50
+)
+                            translate(0 0)  scale(0.5625)  
+                            translate(
+                                -50 -50
+)">
+						<use xlink:href="#picture"   />
+				</g>
+			</g>
+
+		
+
+
+
+	</svg>

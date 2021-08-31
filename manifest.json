@@ -1,0 +1,13 @@
+{
+    "name": "BlackTop OS",
+    "short_name": "BTOS",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0050ff",
+    "description": "BlackTop OS Is a cloud based os you run in your browser",
+    "icons": [{
+      "src": "/favicon.svg",
+      "sizes": "128x128",
+      "type": "image/svg"
+    }]
+  }

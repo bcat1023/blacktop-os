@@ -1,0 +1,146 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BlackTop OS</title>
+    <script src="dist/winbox.bundle.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="/favicon.svg">
+    <script>
+        function testImage(URL) {
+            var tester = new Image();
+            tester.onload = imageFound;
+            tester.onerror = imageNotFound;
+            tester.src = URL;
+        }
+
+        function imageFound() {
+            console.log('Initial network test passed')
+        }
+
+        function imageNotFound() {
+            alert('An internet connection is required to use BlackTop OS');
+            console.log('Initial network test failed')
+        }
+
+        testImage("https://via.placeholder.com/350x150");
+    </script>
+</head>
+
+<style>
+    body {
+        margin: 0px;
+        background: url("/image/436025-water-waterfall-nature-outdoors-rocks.jpg");
+        background-size: cover;
+    }
+
+    .topbarback {
+        background-color: silver;
+        width: 100%;
+        height: 23px;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .topbtn {
+        padding-left: 6px;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        height: 23px;
+        border-radius: 0px;
+        color: black;
+    }
+
+    .topbtn:hover {
+        background-color: #0050ff;
+        color: white;
+    }
+
+    li {
+        margin-left: 40px;
+        padding-left: 0px;
+    }
+
+    ul {
+        padding-left: 0px;
+        list-style-type: none;
+        position: fixed;
+        margin: 0px;
+    }
+</style>
+
+<body>
+    <div id="topbarback" class="topbarback">
+        <ul>
+            <li><a onclick="imenu()"><button class="topbtn">Menu</button></li>
+        </ul>
+    </div>
+
+    <!--scripts-->
+    <script>
+        function imenu() {
+            new WinBox({
+                id: "imenu",
+                root: document.body,
+                title: "BlackTop Menu",
+                url: '/internal/app/menu/app.html',
+                top: 23,
+                width: 285
+            });
+            window.buttons = {
+                force_close: function () {
+
+                    winbox.close(true);
+                }
+            }
+        }
+
+        window.buttons = {
+            force_close: function () {
+
+                winbox.close(true);
+            }
+        }
+
+        function ipower() {
+            new WinBox({
+                id: "ipower",
+                root: document.body,
+                title: "Please Select A Option",
+                url: '/internal/app/power/app.html',
+                modal: true
+            });
+        }
+
+        function iwelcome() {
+            new WinBox({
+                id: "iwelcome",
+                root: document.body,
+                title: "Welcome To BlackTop OS",
+                url: '/internal/app/welcome/app.html',
+                x: "center",
+                y: "center"
+            });
+        }
+
+        new WinBox({
+            id: "iwelcome",
+            root: document.body,
+            title: "Welcome To BlackTop OS",
+            url: '/internal/app/welcome/app.html',
+            x: "center",
+            y: "center"
+        });
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/sw.js')
+                .then(function () { console.log("Service Worker Registered"); });
+        }
+    </script>
+</body>
+
+</html>

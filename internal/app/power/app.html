@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container { 
+  height: 200px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="center" style="margin-top: -30px;">
+        <h2>Please Select A Power Option</h2>
+    </div>
+  <div class="center">
+    <a onclick="shutdown" href="/shutdown.html" target="_parent"><button>Shutdown</button></a>
+    <a onclick="reboot()" href="/" target="_parent"><button>Reboot</button></a>
+  </div>
+</div>
+<script>
+  function reboot() {
+    alert('All data will be lost upon reboot!!!!');
+  }
+
+  function shutdown() {
+    alert('To shutdown please close the tab');
+  }
+</script>
+</body>
+</html>
