@@ -16,6 +16,24 @@
 
         function imageFound() {
             console.log('Initial network test passed')
+            console.log('Double checking')
+            function testImage(URL) {
+                var tester = new Image();
+                tester.onload = imageFound;
+                tester.onerror = imageNotFound;
+                tester.src = URL;
+            }
+
+            function imageFound() {
+                console.log('Confirmed')
+            }
+
+            function imageNotFound() {
+                alert('An internet connection is required to use BlackTop OS');
+                console.log('second network test failed')
+            }
+
+            testImage("/favicon.svg");
         }
 
         function imageNotFound() {
