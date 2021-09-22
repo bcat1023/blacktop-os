@@ -42,6 +42,7 @@
     <script src="https://kit.fontawesome.com/f5b6b4399c.js" crossorigin="anonymous"></script>
     <!-- Sidebar -->
     <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:48px;margin-top: -50px;">
+        <a href="#" style="bottom: 58px;position: absolute;" class="w3-bar-item w3-button"><i style="margin-left: 5px;" class="fas fa-info"></i></a>
         <a href="#" style="bottom: 29px;position: absolute;" class="w3-bar-item w3-button"><i
                 class="fas fa-cog"></i></a>
         <a onclick="parent.ipower();" href="#" style="bottom: 0px;position: absolute;" class="w3-bar-item w3-button"><i class="fa fa-power-off"
@@ -50,10 +51,10 @@
     </div>
     <div style="margin-left: 48px;width: 100%;height: 100%;">
         <li style="margin-top:50px">
-            <ul class="sop">Settings</ul>
-            <ul class="sop">About</ul>
-            <ul class="sop">Version</ul>
             <ul onclick="parent.iwelcome();parent.document.getElementById('imenu').remove();" class="sop">Welcome</ul>
+            <ul onclick="parent.open(`//cdn.zone.msn.com/assets/games/microsoftsolitairecollection/2019/20190729T121300_1.5.4.1_release_v0001_9af64392_msn/solitaire/index.html?hostingEnvironment=zone`, 'Microsoft Solitaire Collection', 'msc', '900px', '492px');parent.document.getElementById('imenu').remove();" class="sop">Microsoft Solitaire Collection</ul>
+
+            <ul onclick="parent.open(`//titaniumnetwork.org/fetch/aHR0cHM6Ly93ZWJjYW10b3kuY29tL2FwcC8=`, 'Camera', 'msc');parent.document.getElementById('imenu').remove();" class="cam">Camera</ul>
         </li>
     </div>
     <script>

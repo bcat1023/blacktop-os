@@ -14,6 +14,40 @@
             tester.src = URL;
         }
 
+        function open(url, title, id, width, height) {
+            if (width == undefined) {
+                var width = "50%"
+            }
+            if (height == undefined) {
+                var height = '50%'
+            }
+            if (title == undefined) {
+                var title = 'Error'
+                var url = './internal/app/test/app.html'
+                var id = 'err'
+            }
+            if (url == undefined) {
+                var title = 'Error'
+                var url = './internal/app/test/app.html'
+                var id = 'err'
+            }
+            if (id == undefined) {
+                var title = 'Error'
+                var url = './internal/app/test/app.html'
+                var id = 'err'
+            }
+            new WinBox({
+                id: `${id}`,
+                root: document.body,
+                title: `${title}`,
+                url: `${url}`,
+                x: "center",
+                y: "center",
+                width: `${width}`,
+                height: `${height}`
+            });
+        }
+
         function imageFound() {
             console.log('Initial network test passed')
             console.log('Double checking')
