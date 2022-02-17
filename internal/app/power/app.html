@@ -1,44 +1,56 @@
-<!DOCTYPE html>
+<!-- Version 2, power app, 2022 -->
 <html>
+
 <head>
-<style>
-body {
-  font-family: -webkit-pictograph;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    body {
+      font-family: 'Titillium Web', sans-serif;
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.container { 
-  height: 200px;
-  position: relative;
-}
+    button {
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+      border: none;
+      background: lightgray;
+      padding-right: 20px;
+      padding-left: 20px;
+      height: 30px;
+      border-radius: 11px;
+      transition: .5s;
+    }
 
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-</style>
+    button:hover {
+      background-color: gray;
+      transition: .5s;
+    }
+
+    button:focus {
+      background-color: gray;
+      transition: .5s;
+      box-shadow: 0px 5px 4px lightgrey;
+    }
+  </style>
 </head>
-<body>
-<div class="container">
-    <div class="center" style="margin-top: -30px;">
-        <h2>Please Select A Power Option</h2>
-    </div>
-  <div class="center">
-    <a onclick="shutdown" href="/shutdown.html" target="_parent"><button>Shutdown</button></a>
-    <a onclick="reboot()" href="/" target="_parent"><button>Reboot</button></a>
-  </div>
-</div>
-<script>
-  function reboot() {
-    alert('All data will be lost upon reboot!!!!');
-  }
 
-  function shutdown() {
-    alert('To shutdown please close the tab');
-  }
-</script>
+<body>
+  <h2>To restart, press reset</h1>
+  <button onclick="restart()"><a href="/" target="_parent">Reset</a></button>
+  <div id="hide" style="display: none;" class="progress">
+    <div class="indeterminate"></div>
+  </div>
+  <script>
+    function restart() {
+      document.getElementById('hide').style.display = 'sticky'
+    }
+  </script>
 </body>
+
 </html>

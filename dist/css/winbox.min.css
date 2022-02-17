@@ -1,9 +1,9 @@
-@keyframes fade-in{
-    0%{
-        opacity:0
+@keyframes popup {
+    0% {
+        transform: scale(0.2);
     }
-    to{
-        opacity:.85
+    to {
+        transform: scale(1);
     }
 }
 .winbox.modal:after,.winbox.modal:before{
@@ -20,7 +20,8 @@
     will-change:transform,width,height;
     contain:layout size;
     text-align:left;
-    touch-action:none
+    touch-action:none;
+    animation: popup 0.3s cubic-bezier(0.3, 1, 0.3, 1) backwards;
 }
 .wb-body,.wb-header{
     position:absolute;
